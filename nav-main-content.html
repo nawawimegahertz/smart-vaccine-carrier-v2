@@ -1,0 +1,56 @@
+<!-- Top Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Smart Vaccine Carrier Tracker</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8 col-md-7">
+            <div id="map"></div>
+        </div>
+        <div class="col-lg-4 col-md-5">
+            <div class="card p-3">
+                <div class="card-header bg-transparent border-0">
+                    <h5 class="card-title">Rekapitulasi Data Mutakhir</h5>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="startLocation">Keberangkatan (lat,lng)</label>
+                        <input type="text" id="startLocation" class="form-control" placeholder="Masukkan koordinat keberangkatan">
+                    </div>
+                    <div class="form-group">
+                        <label for="endLocation">Tujuan (lat,lng)</label>
+                        <input type="text" id="endLocation" class="form-control" placeholder="Masukkan koordinat tujuan">
+                    </div>
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr><td>Tanggal</td><td>: <span id="time_date"></span></td></tr>
+                            <tr><td>Waktu</td><td>: <span id="time_time"></span></td></tr>
+                            <tr><td>Suhu</td><td>: <span id="temperature"></span> °C</td></tr>
+                            <tr><td>Baterai</td><td>: <span id="battery"></span> %</td></tr>
+                            <tr><td>Latitude</td><td>: <span id="latitude"></span></td></tr>
+                            <tr><td>Longitude</td><td>: <span id="longitude"></span></td></tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-between">
+                        <button id="startPolylineButton" class="btn btn-success">Mulai Pelacakan</button>
+                        <button id="resetButton" class="btn btn-primary" style="display: none;">Reset</button>
+                        <button id="exportXLSXButton" class="btn btn-warning">Ekspor ke XLSX</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
